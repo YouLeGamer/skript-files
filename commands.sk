@@ -1,0 +1,4 @@
+command /firefood:
+  trigger:
+    send title "firefood" with subtitle "#FoodezCommeVousEtes" for 5 seconds
+    reset title
