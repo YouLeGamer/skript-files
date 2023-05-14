@@ -1,11 +1,5 @@
-command /himnusz:
-    description: Long live Hungary.
+command /broadcast [<text>]:
+    description: Broadcasts a message.
+    permission: op
     trigger:
-        send "&cIsten, áldd meg a magyart" to player
-        send "&cJó kedvvel, bőséggel,"
-        send "&cNyújts feléje védő kart,"
-        send "&fHa küzd ellenséggel;"
-        send "&fBal sors akit régen tép,"
-        send "&fHozz rá víg esztendőt,"
-        send "&2Megbűnhődte már e nép"
-        send "&2A múltat s jövendőt!"
+        broadcast "&7[&cBROADCAST&7] &f%text%"
