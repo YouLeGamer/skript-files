@@ -1,5 +1,18 @@
-command /broadcast [<text>]:
-    description: Broadcasts a message.
-    permission: op
+command /marseillaise:
+    description: Long live France.
     trigger:
-        broadcast "&7[&cBROADCAST&7] &f%text%"
+        send "&9Allons enfants de la Patrie,"
+        send "&9Le jour de gloire est arrivé,"
+        send "&9Contre nous, de la tyrannie,"
+        send "&9L'étendard sanglant est levé,"
+        send "&9L'étendard sanglant est levé!"
+        send "&fEntendez-vous, dans les campagnes,"
+        send "&fMugir ces féroces soldats?,"
+        send "&fIls viennent jusque dans vos bras,"
+        send "&fÉgorger vos fils, vos compagnes!,"
+        send "&fAux armes, citoyens!,"
+        send "&cFormez vos batallions!"
+        send "&cMarchons, marchons!,"
+        send "&cQu'un sang impur"
+        send "&cAbreuve nos sillions!"
+        send "&6Command created by &eYouLeGamer&6."
