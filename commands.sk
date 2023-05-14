@@ -1,4 +1,13 @@
-command /firefood:
-  trigger:
-    send title "firefood" with subtitle "#FoodezCommeVousEtes" for 5 seconds
-    reset title
+command /msg [<player>] [<text>]:
+	aliases: /message, /m
+	trigger:
+		if arg-1 isn't set:
+			send "&cError: Argument expected (/msg <player> <argument>)"
+		else if arg-2 isn't set:
+			send "&cError: Argument expected (/msg <player> <argument>)"
+		# else:
+			 # if arg-1 is player:
+				# send "&cError: You cannot message yourself!"
+		else:
+			send "&6[&e%player% &6-> &eYou&6] &f%arg-2%" to arg-1
+			send "&6[&eYou &6-> &e%arg-1%&6] &f%arg-2%" to player
