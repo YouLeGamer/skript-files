@@ -1,13 +1,14 @@
-command /msg [<player>] [<text>]:
-	aliases: /message, /m
+command /report [<player>] [<reason>]:
+	description: Reports a player
 	trigger:
 		if arg-1 isn't set:
-			send "&cError: Argument expected (/msg <player> <argument>)"
-		else if arg-2 isn't set:
-			send "&cError: Argument expected (/msg <player> <argument>)"
-		# else:
-			 # if arg-1 is player:
-				# send "&cError: You cannot message yourself!"
+			send "&cError: /report <player> <message explaining why you report this player>"
+		else if arg-1 is player:
+			send "&cError: You cannot report yourself!"
 		else:
-			send "&6[&e%player% &6-> &eYou&6] &f%arg-2%" to arg-1
-			send "&6[&eYou &6-> &e%arg-1%&6] &f%arg-2%" to player
+			if arg-2 isn't set:
+				send  "&cError: You must write a message explaining why you report this player!"
+			else:
+				loop all players:
+					if {grade.%players%} is greater than or equal to 4:
+						send "&7[&6REPORT&7] &6%player% has reported %arg-1% for reason: &c%arg-2%"
