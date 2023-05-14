@@ -1,14 +1,11 @@
-command /report [<player>] [<reason>]:
-	description: Reports a player
-	trigger:
-		if arg-1 isn't set:
-			send "&cError: /report <player> <message explaining why you report this player>"
-		else if arg-1 is player:
-			send "&cError: You cannot report yourself!"
-		else:
-			if arg-2 isn't set:
-				send  "&cError: You must write a message explaining why you report this player!"
-			else:
-				loop all players:
-					if {grade.%players%} is greater than or equal to 4:
-						send "&7[&6REPORT&7] &6%player% has reported %arg-1% for reason: &c%arg-2%"
+command /himnusz:
+    description: Long live Hungary.
+    trigger:
+        send "&cIsten, áldd meg a magyart" to player
+        send "&cJó kedvvel, bőséggel,"
+        send "&cNyújts feléje védő kart,"
+        send "&fHa küzd ellenséggel;"
+        send "&fBal sors akit régen tép,"
+        send "&fHozz rá víg esztendőt,"
+        send "&2Megbűnhődte már e nép"
+        send "&2A múltat s jövendőt!"
